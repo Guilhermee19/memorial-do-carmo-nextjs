@@ -15,7 +15,7 @@ export const ThemeSwitcher = () => {
   }, [])
 
   const handleSwitchChange = () => {
-    const newTheme = theme === 'dark' ? 'light' : 'dark'
+    const newTheme = theme === 'dark' ? 'light' : 'light'
     setTheme(newTheme)
   }
 

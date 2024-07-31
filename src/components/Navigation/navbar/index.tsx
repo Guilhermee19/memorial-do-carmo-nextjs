@@ -3,19 +3,13 @@
 import {
   Link,
   Navbar,
-  NavbarBrand,
   NavbarContent,
-  NavbarItem,
   NavbarMenu,
-  NavbarMenuItem,
-  NavbarMenuToggle,
+  NavbarMenuItem
 } from '@nextui-org/react'
 import { useTranslations } from 'next-intl'
 import React from 'react'
 import { NavigationProps } from 'src/components/Navigation'
-import { LangSelect } from '../../Language'
-import { ThemeSwitcher } from '../../Theme'
-import { Logo } from './logo'
 
 export default function NavbarComponent({ router }: NavigationProps) {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
@@ -25,35 +19,22 @@ export default function NavbarComponent({ router }: NavigationProps) {
     <Navbar
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
-      className="shadow-sm"
+      className="shadow-sm bg-white h-11 border-b-4 border-[#f3d2a7]"
     >
-      <NavbarContent className="!flex-grow-0">
+      {/* <NavbarContent className="!flex-grow-0 max-w-0">
         <NavbarItem className="z-10 size-10">
           <NavbarMenuToggle
             aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
             className="sm:hidden"
           />
         </NavbarItem>
-        <NavbarItem>
-          <NavbarBrand className="smMax:hidden  ">
-            <Logo />
-          </NavbarBrand>
-        </NavbarItem>
-      </NavbarContent>
+      </NavbarContent> */}
 
-      <NavbarContent className="sm:hidden w-full !justify-center">
-        <NavbarItem>
-          <NavbarBrand className="!justify-center">
-            <Logo />
-          </NavbarBrand>
-        </NavbarItem>
-      </NavbarContent>
-
-      <NavbarContent className="hidden p-4 sm:flex gap-4" justify="center">
+      <NavbarContent className="hidden p-4 sm:flex gap-10 m-auto" justify="center">
         {router.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link
-              className="w-full dark:text-dark-text text-light-text font-semibold text-xl"
+              className="w-full text-[#5e5e5e] text-medium"
               href={item.router}
               size="lg"
               onClick={() => setIsMenuOpen(false)}
@@ -63,14 +44,7 @@ export default function NavbarComponent({ router }: NavigationProps) {
           </NavbarMenuItem>
         ))}
       </NavbarContent>
-      <NavbarContent className="flex items-center justify-center gap-0  !flex-grow-0">
-        <NavbarItem>
-          <LangSelect></LangSelect>
-        </NavbarItem>
-        <NavbarItem>
-          <ThemeSwitcher />
-        </NavbarItem>
-      </NavbarContent>
+
       <NavbarMenu>
         {router.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>

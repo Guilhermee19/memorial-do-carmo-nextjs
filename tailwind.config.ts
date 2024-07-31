@@ -31,7 +31,7 @@ const config: Config = {
         'secondary-bg': '#e9e9e9',
         dark: {
           background: '#000',
-          text: '#ffffff',
+          text: '#282a36',
         },
         light: {
           background: '#fff',

@@ -2,7 +2,6 @@
 
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
-import AutoComplete from 'src/components/Autocomplete'
 import { z } from 'zod'
 
 export default function Home() {
@@ -37,10 +36,10 @@ export default function Home() {
 
   return (
     <main className="p-4">
-      <header className="flex justify-center">
+      {/* <header className="flex justify-center">
         <h1 className="text-2xl fon">Apresentação dos componentes</h1>
-      </header>
-      <div className="size-full">
+      </header> */}
+      {/* <div className="size-full">
         <div className="size-full   flex-col items-center justify-center">
           <h1 className="font-bold">Autocomplete</h1>
           <AutoComplete
@@ -53,7 +52,7 @@ export default function Home() {
             onSelect={handleAutoCompleteChange} // Passa a função para lidar com a seleção
           />
         </div>
-      </div>
+      </div> */}
     </main>
   )
 }

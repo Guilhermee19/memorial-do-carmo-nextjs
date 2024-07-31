@@ -8,17 +8,37 @@ export default function AuthLayout({ children }: LayoutProps) {
   const router: IRoutes[] = [
     {
       name: 'home',
-      router: '/initial',
+      router: '/memorial-do-carmo',
       icon: '',
     },
     {
-      name: 'about',
-      router: '/about',
+      name: 'the_memorial',
+      router: '/cemiterio-memorial-do-carmo',
+      icon: '',
+    },
+    {
+      name: 'solutions',
+      router: '/solucoes',
+      icon: '',
+    },
+    {
+      name: 'services',
+      router: '/servicos',
+      icon: '',
+    },
+    {
+      name: 'blog',
+      router: '/blog',
       icon: '',
     },
     {
       name: 'contact',
-      router: '/contact',
+      router: '/contato',
+      icon: '',
+    },
+    {
+      name: 'assignee_area',
+      router: '/area-do-cessionario',
       icon: '',
     },
   ]

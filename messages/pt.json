@@ -1,11 +1,15 @@
 {
   "Navbar" : {
-    "home" : "Início",
-    "about" : "Sobre",
-    "contact": "Contato"
+    "home": "HOME",
+    "the_memorial": "THE MEMORIAL",
+    "solutions": "SOLUTIONS",
+    "services": "SERVICES",
+    "blog": "BLOG",
+    "contact": "CONTACT",
+    "assignee_area": "ASSIGNEE AREA"
   },
   "NotFound" : {
-"title" : "Pagina não existe"
+    "title" : "Pagina não existe"
   }
 }
 

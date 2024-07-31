@@ -21,7 +21,7 @@ export const Provider = ({
         locale={locale}
         messages={messages}
       >
-        <NextThemesProvider attribute="class" defaultTheme="dark">
+        <NextThemesProvider attribute="class" defaultTheme="light">
           {children}
         </NextThemesProvider>
       </NextIntlClientProvider>

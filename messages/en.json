@@ -1,8 +1,12 @@
 {
   "Navbar": {
-    "home": "Home",
-    "about": "About",
-    "contact": "Contact"
+    "home": "HOME",
+    "the_memorial": "O MEMORIAL",
+    "solutions": "SOLUÇÕES",
+    "services": "SERVIÇOS",
+    "blog": "BLOG",
+    "contact": "CONTATO",
+    "assignee_area": "ÁREA DO CESSIONÁRIO"
   },
   "NotFound": {
     "title": "Page does not exist"
