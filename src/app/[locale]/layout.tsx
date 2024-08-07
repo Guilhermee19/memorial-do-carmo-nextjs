@@ -1,5 +1,5 @@
 import { Metadata, Viewport } from 'next'
-import { Poppins } from 'next/font/google'
+import { Baskervville, Poppins } from 'next/font/google'
 import { notFound } from 'next/navigation'
 import { Provider } from '../provider'
 import './globals.scss'
@@ -7,8 +7,15 @@ import './globals.scss'
 const poppins = Poppins({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-fira',
+  variable: '--font-poppins',
   weight: ['300', '400', '500', '600', '700'],
+})
+
+const baskervville = Baskervville({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-baskervville',
+  weight: ['400'],
 })
 
 interface RootLayoutProps {
@@ -41,7 +48,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body className={poppins.className} suppressHydrationWarning>
+      <body className={`${poppins.variable} ${baskervville.variable}`} suppressHydrationWarning>
         <Provider messages={messages} locale={locale}>
           {children}
         </Provider>

@@ -5,3 +5,11 @@
 * {
   -webkit-font-smoothing: antialiased;
 }
+
+body {
+  h3 {
+    &.title-cyan {
+      @apply text-3xl;
+    }
+  }
+}

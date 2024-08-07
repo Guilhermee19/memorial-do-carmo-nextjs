@@ -11,6 +11,11 @@ const config: Config = {
   darkMode: ['class'],
   theme: {
     extend: {
+      fontFamily: {
+        poppins: ['var(--font-poppins)'],
+        baskervville: ['var(--font-baskervville)'],
+      },
+      backgroundColor: {},
       height: {
         heightLessNav: 'h-[calc(100vh-64px)]',
       },

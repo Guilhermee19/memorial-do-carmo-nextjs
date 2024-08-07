@@ -49,7 +49,7 @@ export default function NavbarComponent({ router }: NavigationProps) {
         {router.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link
-              className="w-full dark:text-dark-text text-light-text font-semibold text-xl"
+              className="w-full text-[#5e5e5e] text-medium"
               href={item.router}
               size="lg"
               onClick={() => setIsMenuOpen(false)}
