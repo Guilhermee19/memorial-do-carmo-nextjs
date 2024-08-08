@@ -1,8 +1,15 @@
 import { Metadata, Viewport } from 'next'
-import { Baskervville, Poppins } from 'next/font/google'
+import { Baskervville, Open_Sans, Poppins } from 'next/font/google'
 import { notFound } from 'next/navigation'
 import { Provider } from '../provider'
 import './globals.scss'
+
+const open_sans = Open_Sans({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-open-sans',
+  weight: ['300', '400', '500', '600', '700'],
+})
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -48,7 +55,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body className={`${poppins.variable} ${baskervville.variable}`} suppressHydrationWarning>
+      <body className={`${poppins.variable} ${baskervville.variable} ${open_sans.variable}`} suppressHydrationWarning>
         <Provider messages={messages} locale={locale}>
           {children}
         </Provider>

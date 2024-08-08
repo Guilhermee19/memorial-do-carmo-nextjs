@@ -1,6 +1,7 @@
 'use client'
 
 import { zodResolver } from '@hookform/resolvers/zod'
+import { Image } from '@nextui-org/react'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 
@@ -35,10 +36,34 @@ export default function Home() {
   }
 
   return (
-    <main className="p-4">
-      {/* <header className="flex justify-center">
-        <h1 className="text-2xl fon">Apresentação dos componentes</h1>
-      </header> */}
+    <main className="w-full p-0 mt-0">
+      <Image
+        src="/banner/Banner001.jpg"
+        alt="Landscape picture"
+        className="object-contain w-full"
+        width={1440}
+        height={800}
+      />
+
+      <header className="flex justify-center mb-3">
+        <h1 className="max-w-3xl text-center leading-normal font-bold font-open_sans text-[#015b7d] text-4xl">Entenda o que você precisa fazer caso tenha perdido alguém</h1>
+      </header>
+
+      <div className='w-72 bg-[#006c94] h-[2px] m-auto'></div>
+
+      <div className='max-w-[90%] m-auto mt-12 flex justify-between items-start gap-4'>
+        <div>
+          <h4 className='text-center text-2xl font-semibold text-[#006c94]'> Sepultar ou cremar? </h4>
+        </div>
+
+        <div>
+          <h4 className='text-center text-2xl font-semibold text-[#006c94]'> Contratar serviço funerário </h4>
+        </div>
+
+        <div>
+          <h4 className='text-center text-2xl font-semibold text-[#006c94]'> Organização de velório </h4>
+        </div>
+      </div>
       {/* <div className="size-full">
         <div className="size-full   flex-col items-center justify-center">
           <h1 className="font-bold">Autocomplete</h1>

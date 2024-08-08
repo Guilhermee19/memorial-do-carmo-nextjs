@@ -14,6 +14,7 @@ const config: Config = {
       fontFamily: {
         poppins: ['var(--font-poppins)'],
         baskervville: ['var(--font-baskervville)'],
+        open_sans: ['var(--font-open-sans)'],
       },
       backgroundColor: {},
       height: {
